@@ -1,0 +1,2183 @@
+{
+ "url": "http://127.0.0.1:8218/",
+ "runs": [
+  {
+   "tag": "keyboard-1440-prereq",
+   "log": [
+    [
+     "Tab",
+     {
+      "tag": "A",
+      "id": "",
+      "cls": "skip",
+      "text": "Skip to the 3 questions"
+     }
+    ],
+    [
+     "Enter",
+     {
+      "tag": "DIV",
+      "id": "quiz",
+      "cls": "quiz",
+      "text": "FREE · 3 QUESTIONS\n\nFind the step you’re stuck on.\n\n1 of 3\n\nQuestion 1"
+     }
+    ],
+    [
+     "Q1 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "A\nI sell a service I’m proud of. I want a path to clients I can repeat"
+     }
+    ],
+    [
+     "after Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "A\nDo great work for my clients, and find new ones when I can."
+     }
+    ],
+    [
+     "after Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "A\nI can’t say my offer in one clear line yet, or my contacts are scatt"
+     }
+    ],
+    [
+     "after Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 10,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "prereq",
+    "title": "Your offer and your list come first.",
+    "focusIsTitle": true,
+    "echo": "You said you want a path to clients you can repeat, not luck. On a normal week you do great work for your clients, and find new ones when you can. And the honest part: you can’t say your offer in one clear line yet, or your contacts are scattered all over.",
+    "leadFormat": "The offer in one line",
+    "here": [
+     "prereq"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/#quiz",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "keyboard-390-prereq",
+   "log": [
+    [
+     "Tab",
+     {
+      "tag": "A",
+      "id": "",
+      "cls": "skip",
+      "text": "Skip to the 3 questions"
+     }
+    ],
+    [
+     "Enter",
+     {
+      "tag": "DIV",
+      "id": "quiz",
+      "cls": "quiz",
+      "text": "FREE · 3 QUESTIONS\n\n1 of 3\n\nQuestion 1 of 3\n\nWhat do you want next for"
+     }
+    ],
+    [
+     "Q1 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "A\nI sell a service I’m proud of. I want a path to clients I can repeat"
+     }
+    ],
+    [
+     "after Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "A\nDo great work for my clients, and find new ones when I can."
+     }
+    ],
+    [
+     "after Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "A\nI can’t say my offer in one clear line yet, or my contacts are scatt"
+     }
+    ],
+    [
+     "after Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 9,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "prereq",
+    "title": "Your offer and your list come first.",
+    "focusIsTitle": true,
+    "echo": "You said you want a path to clients you can repeat, not luck. On a normal week you do great work for your clients, and find new ones when you can. And the honest part: you can’t say your offer in one clear line yet, or your contacts are scattered all over.",
+    "leadFormat": "The offer in one line",
+    "here": [
+     "prereq"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/#quiz",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "keyboard-1440-start",
+   "log": [
+    [
+     "Tab",
+     {
+      "tag": "A",
+      "id": "",
+      "cls": "skip",
+      "text": "Skip to the 3 questions"
+     }
+    ],
+    [
+     "Enter",
+     {
+      "tag": "DIV",
+      "id": "quiz",
+      "cls": "quiz",
+      "text": "FREE · 3 QUESTIONS\n\nFind the step you’re stuck on.\n\n1 of 3\n\nQuestion 1"
+     }
+    ],
+    [
+     "Q1 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "B\nI run a niche agency. I want a steady way to land clients without wa"
+     }
+    ],
+    [
+     "after Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "B\nPost something useful, then wait for people to reach out."
+     }
+    ],
+    [
+     "after Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "B\nPlenty of people know me and what I do, but almost nobody asks to wo"
+     }
+    ],
+    [
+     "after Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 10,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "start",
+    "title": "People know your work, but it isn’t turning into clients.",
+    "focusIsTitle": true,
+    "echo": "You said you want a steady way to land clients without waiting on referrals. On a normal week you post something useful, then wait for people to reach out. And the honest part: plenty of people know you and what you do, but almost nobody asks to work with you.",
+    "leadFormat": "The Step 0 reactivation message",
+    "here": [
+     "s0",
+     "s1"
+    ],
+    "hereVisible": 2,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/#quiz",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "keyboard-390-start",
+   "log": [
+    [
+     "Tab",
+     {
+      "tag": "A",
+      "id": "",
+      "cls": "skip",
+      "text": "Skip to the 3 questions"
+     }
+    ],
+    [
+     "Enter",
+     {
+      "tag": "DIV",
+      "id": "quiz",
+      "cls": "quiz",
+      "text": "FREE · 3 QUESTIONS\n\n1 of 3\n\nQuestion 1 of 3\n\nWhat do you want next for"
+     }
+    ],
+    [
+     "Q1 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "B\nI run a niche agency. I want a steady way to land clients without wa"
+     }
+    ],
+    [
+     "after Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "B\nPost something useful, then wait for people to reach out."
+     }
+    ],
+    [
+     "after Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "B\nPlenty of people know me and what I do, but almost nobody asks to wo"
+     }
+    ],
+    [
+     "after Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 9,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "start",
+    "title": "People know your work, but it isn’t turning into clients.",
+    "focusIsTitle": true,
+    "echo": "You said you want a steady way to land clients without waiting on referrals. On a normal week you post something useful, then wait for people to reach out. And the honest part: plenty of people know you and what you do, but almost nobody asks to work with you.",
+    "leadFormat": "The Step 0 reactivation message",
+    "here": [
+     "s0",
+     "s1"
+    ],
+    "hereVisible": 2,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/#quiz",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "keyboard-1440-dm",
+   "log": [
+    [
+     "Tab",
+     {
+      "tag": "A",
+      "id": "",
+      "cls": "skip",
+      "text": "Skip to the 3 questions"
+     }
+    ],
+    [
+     "Enter",
+     {
+      "tag": "DIV",
+      "id": "quiz",
+      "cls": "quiz",
+      "text": "FREE · 3 QUESTIONS\n\nFind the step you’re stuck on.\n\n1 of 3\n\nQuestion 1"
+     }
+    ],
+    [
+     "Q1 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "C\nI have an audience or a list. I want more of those people to become "
+     }
+    ],
+    [
+     "after Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "C\nTry a new tactic, then drop it when it doesn’t land fast."
+     }
+    ],
+    [
+     "after Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "C\nConversations start, but they rarely turn into a booked call."
+     }
+    ],
+    [
+     "after Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 10,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "dm",
+    "title": "Your conversations stop before the call.",
+    "focusIsTitle": true,
+    "echo": "You said you want more of the people in your audience or list to become clients. On a normal week you try a new tactic, then drop it when it doesn’t land fast. And the honest part: conversations start, but they rarely turn into a booked call.",
+    "leadFormat": "Track replies and answer the first responses",
+    "here": [
+     "s2"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/#quiz",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "keyboard-390-dm",
+   "log": [
+    [
+     "Tab",
+     {
+      "tag": "A",
+      "id": "",
+      "cls": "skip",
+      "text": "Skip to the 3 questions"
+     }
+    ],
+    [
+     "Enter",
+     {
+      "tag": "DIV",
+      "id": "quiz",
+      "cls": "quiz",
+      "text": "FREE · 3 QUESTIONS\n\n1 of 3\n\nQuestion 1 of 3\n\nWhat do you want next for"
+     }
+    ],
+    [
+     "Q1 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "C\nI have an audience or a list. I want more of those people to become "
+     }
+    ],
+    [
+     "after Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "C\nTry a new tactic, then drop it when it doesn’t land fast."
+     }
+    ],
+    [
+     "after Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "C\nConversations start, but they rarely turn into a booked call."
+     }
+    ],
+    [
+     "after Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 9,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "dm",
+    "title": "Your conversations stop before the call.",
+    "focusIsTitle": true,
+    "echo": "You said you want more of the people in your audience or list to become clients. On a normal week you try a new tactic, then drop it when it doesn’t land fast. And the honest part: conversations start, but they rarely turn into a booked call.",
+    "leadFormat": "Track replies and answer the first responses",
+    "here": [
+     "s2"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/#quiz",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "keyboard-1440-close",
+   "log": [
+    [
+     "Tab",
+     {
+      "tag": "A",
+      "id": "",
+      "cls": "skip",
+      "text": "Skip to the 3 questions"
+     }
+    ],
+    [
+     "Enter",
+     {
+      "tag": "DIV",
+      "id": "quiz",
+      "cls": "quiz",
+      "text": "FREE · 3 QUESTIONS\n\nFind the step you’re stuck on.\n\n1 of 3\n\nQuestion 1"
+     }
+    ],
+    [
+     "Q1 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "A\nI sell a service I’m proud of. I want a path to clients I can repeat"
+     }
+    ],
+    [
+     "after Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "D\nTalk to interested people, then let it drift when I’m busy."
+     }
+    ],
+    [
+     "after Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "D\nI get on calls, but too many end with “let me think about it.”"
+     }
+    ],
+    [
+     "after Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 10,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "close",
+    "title": "Your calls end without a decision.",
+    "focusIsTitle": true,
+    "echo": "You said you want a path to clients you can repeat, not luck. On a normal week you talk to interested people, then let it drift when you’re busy. And the honest part: you get on calls, but too many end with “let me think about it”.",
+    "leadFormat": "Your last three calls",
+    "here": [
+     "s3"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/#quiz",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "keyboard-390-close",
+   "log": [
+    [
+     "Tab",
+     {
+      "tag": "A",
+      "id": "",
+      "cls": "skip",
+      "text": "Skip to the 3 questions"
+     }
+    ],
+    [
+     "Enter",
+     {
+      "tag": "DIV",
+      "id": "quiz",
+      "cls": "quiz",
+      "text": "FREE · 3 QUESTIONS\n\n1 of 3\n\nQuestion 1 of 3\n\nWhat do you want next for"
+     }
+    ],
+    [
+     "Q1 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "A\nI sell a service I’m proud of. I want a path to clients I can repeat"
+     }
+    ],
+    [
+     "after Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "D\nTalk to interested people, then let it drift when I’m busy."
+     }
+    ],
+    [
+     "after Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3 focus",
+     {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "opt",
+      "text": "D\nI get on calls, but too many end with “let me think about it.”"
+     }
+    ],
+    [
+     "after Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 9,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "close",
+    "title": "Your calls end without a decision.",
+    "focusIsTitle": true,
+    "echo": "You said you want a path to clients you can repeat, not luck. On a normal week you talk to interested people, then let it drift when you’re busy. And the honest part: you get on calls, but too many end with “let me think about it”.",
+    "leadFormat": "Your last three calls",
+    "here": [
+     "s3"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/#quiz",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "tap-1440-prereq",
+   "log": [
+    [
+     "hero button",
+     {
+      "tag": "P",
+      "id": "q1",
+      "cls": "q",
+      "text": "What do you want next for your business?"
+     },
+     {
+      "q1Top": 149,
+      "inView": true
+     }
+    ],
+    [
+     "Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 10,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "prereq",
+    "title": "Your offer and your list come first.",
+    "focusIsTitle": true,
+    "echo": "You said you want a path to clients you can repeat, not luck. On a normal week you do great work for your clients, and find new ones when you can. And the honest part: you can’t say your offer in one clear line yet, or your contacts are scattered all over.",
+    "leadFormat": "The offer in one line",
+    "here": [
+     "prereq"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "tap-390-prereq",
+   "log": [
+    [
+     "hero button",
+     {
+      "tag": "P",
+      "id": "q1",
+      "cls": "q",
+      "text": "What do you want next for your business?"
+     },
+     {
+      "q1Top": 137,
+      "inView": true
+     }
+    ],
+    [
+     "Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 9,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "prereq",
+    "title": "Your offer and your list come first.",
+    "focusIsTitle": true,
+    "echo": "You said you want a path to clients you can repeat, not luck. On a normal week you do great work for your clients, and find new ones when you can. And the honest part: you can’t say your offer in one clear line yet, or your contacts are scattered all over.",
+    "leadFormat": "The offer in one line",
+    "here": [
+     "prereq"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "tap-1440-start",
+   "log": [
+    [
+     "hero button",
+     {
+      "tag": "P",
+      "id": "q1",
+      "cls": "q",
+      "text": "What do you want next for your business?"
+     },
+     {
+      "q1Top": 149,
+      "inView": true
+     }
+    ],
+    [
+     "Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 10,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "start",
+    "title": "People know your work, but it isn’t turning into clients.",
+    "focusIsTitle": true,
+    "echo": "You said you want a steady way to land clients without waiting on referrals. On a normal week you post something useful, then wait for people to reach out. And the honest part: plenty of people know you and what you do, but almost nobody asks to work with you.",
+    "leadFormat": "The Step 0 reactivation message",
+    "here": [
+     "s0",
+     "s1"
+    ],
+    "hereVisible": 2,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "tap-390-start",
+   "log": [
+    [
+     "hero button",
+     {
+      "tag": "P",
+      "id": "q1",
+      "cls": "q",
+      "text": "What do you want next for your business?"
+     },
+     {
+      "q1Top": 137,
+      "inView": true
+     }
+    ],
+    [
+     "Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 9,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "start",
+    "title": "People know your work, but it isn’t turning into clients.",
+    "focusIsTitle": true,
+    "echo": "You said you want a steady way to land clients without waiting on referrals. On a normal week you post something useful, then wait for people to reach out. And the honest part: plenty of people know you and what you do, but almost nobody asks to work with you.",
+    "leadFormat": "The Step 0 reactivation message",
+    "here": [
+     "s0",
+     "s1"
+    ],
+    "hereVisible": 2,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "tap-1440-dm",
+   "log": [
+    [
+     "hero button",
+     {
+      "tag": "P",
+      "id": "q1",
+      "cls": "q",
+      "text": "What do you want next for your business?"
+     },
+     {
+      "q1Top": 149,
+      "inView": true
+     }
+    ],
+    [
+     "Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 10,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "dm",
+    "title": "Your conversations stop before the call.",
+    "focusIsTitle": true,
+    "echo": "You said you want more of the people in your audience or list to become clients. On a normal week you try a new tactic, then drop it when it doesn’t land fast. And the honest part: conversations start, but they rarely turn into a booked call.",
+    "leadFormat": "Track replies and answer the first responses",
+    "here": [
+     "s2"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "tap-390-dm",
+   "log": [
+    [
+     "hero button",
+     {
+      "tag": "P",
+      "id": "q1",
+      "cls": "q",
+      "text": "What do you want next for your business?"
+     },
+     {
+      "q1Top": 137,
+      "inView": true
+     }
+    ],
+    [
+     "Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 9,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "dm",
+    "title": "Your conversations stop before the call.",
+    "focusIsTitle": true,
+    "echo": "You said you want more of the people in your audience or list to become clients. On a normal week you try a new tactic, then drop it when it doesn’t land fast. And the honest part: conversations start, but they rarely turn into a booked call.",
+    "leadFormat": "Track replies and answer the first responses",
+    "here": [
+     "s2"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "tap-1440-close",
+   "log": [
+    [
+     "hero button",
+     {
+      "tag": "P",
+      "id": "q1",
+      "cls": "q",
+      "text": "What do you want next for your business?"
+     },
+     {
+      "q1Top": 149,
+      "inView": true
+     }
+    ],
+    [
+     "Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 10,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "close",
+    "title": "Your calls end without a decision.",
+    "focusIsTitle": true,
+    "echo": "You said you want a path to clients you can repeat, not luck. On a normal week you talk to interested people, then let it drift when you’re busy. And the honest part: you get on calls, but too many end with “let me think about it”.",
+    "leadFormat": "Your last three calls",
+    "here": [
+     "s3"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  },
+  {
+   "tag": "tap-390-close",
+   "log": [
+    [
+     "hero button",
+     {
+      "tag": "P",
+      "id": "q1",
+      "cls": "q",
+      "text": "What do you want next for your business?"
+     },
+     {
+      "q1Top": 137,
+      "inView": true
+     }
+    ],
+    [
+     "Q1",
+     {
+      "tag": "P",
+      "id": "q2",
+      "cls": "q",
+      "text": "On a normal week, I tend to…"
+     }
+    ],
+    [
+     "Q2",
+     {
+      "tag": "P",
+      "id": "q3",
+      "cls": "q",
+      "text": "Honestly, the part I’m stuck on is…"
+     }
+    ],
+    [
+     "Q3",
+     {
+      "tag": "INPUT",
+      "id": "email",
+      "cls": "gate__input",
+      "text": ""
+     }
+    ]
+   ],
+   "emptySubmit": {
+    "error": "Enter an email like name@yourbusiness.com.",
+    "invalid": "true",
+    "resultHidden": true,
+    "requests": 0
+   },
+   "submitRequests": [],
+   "totalRequestsOnLoad": 9,
+   "state": {
+    "homeHidden": true,
+    "resultShown": true,
+    "gap": "close",
+    "title": "Your calls end without a decision.",
+    "focusIsTitle": true,
+    "echo": "You said you want a path to clients you can repeat, not luck. On a normal week you talk to interested people, then let it drift when you’re busy. And the honest part: you get on calls, but too many end with “let me think about it”.",
+    "leadFormat": "Your last three calls",
+    "here": [
+     "s3"
+    ],
+    "hereVisible": 1,
+    "storage": 0,
+    "cookies": "",
+    "url": "http://127.0.0.1:8218/",
+    "scrollY": 0,
+    "overflow": 0
+   }
+  }
+ ],
+ "targets": {
+  "360": {
+   "minSide": 44,
+   "count": 30,
+   "under44": []
+  },
+  "390": {
+   "minSide": 44,
+   "count": 30,
+   "under44": []
+  }
+ },
+ "overflow": {
+  "360": 0,
+  "390": 0
+ },
+ "firstScreen390": {
+  "h1": {
+   "top": 140,
+   "bottom": 340,
+   "inFirstScreen": true
+  },
+  "sub": {
+   "top": 358,
+   "bottom": 436,
+   "inFirstScreen": true
+  },
+  "button": {
+   "top": 464,
+   "bottom": 520,
+   "inFirstScreen": true
+  }
+ },
+ "nojs": {
+  "390": {
+   "cls": "no-js",
+   "nojsVisible": true,
+   "formVisible": false,
+   "fallbackItems": [
+    "I can’t say my offer in one clear line yet, or my contacts are scattered all over.",
+    "Plenty of people know me and what I do, but almost nobody asks to work with me.",
+    "Conversations start, but they rarely turn into a booked call.",
+    "I get on calls, but too many end with “let me think about it.”"
+   ],
+   "sectionsVisible": [
+    [
+     ".hero",
+     true
+    ],
+    [
+     ".creds",
+     true
+    ],
+    [
+     ".ways",
+     true
+    ],
+    [
+     ".magnet",
+     true
+    ],
+    [
+     ".work",
+     true
+    ],
+    [
+     ".about",
+     true
+    ],
+    [
+     ".faq",
+     true
+    ],
+    [
+     ".foot",
+     true
+    ]
+   ],
+   "emailInputs": 0,
+   "words": 991
+  },
+  "1440": {
+   "cls": "no-js",
+   "nojsVisible": true,
+   "formVisible": false,
+   "fallbackItems": [
+    "I can’t say my offer in one clear line yet, or my contacts are scattered all over.",
+    "Plenty of people know me and what I do, but almost nobody asks to work with me.",
+    "Conversations start, but they rarely turn into a booked call.",
+    "I get on calls, but too many end with “let me think about it.”"
+   ],
+   "sectionsVisible": [
+    [
+     ".hero",
+     true
+    ],
+    [
+     ".creds",
+     true
+    ],
+    [
+     ".ways",
+     true
+    ],
+    [
+     ".magnet",
+     true
+    ],
+    [
+     ".work",
+     true
+    ],
+    [
+     ".about",
+     true
+    ],
+    [
+     ".faq",
+     true
+    ],
+    [
+     ".foot",
+     true
+    ]
+   ],
+   "emailInputs": 0,
+   "words": 1010
+  }
+ },
+ "scans": [
+  {
+   "label": "result prereq @1440",
+   "chars": 3148,
+   "hits": []
+  },
+  {
+   "label": "result prereq @390",
+   "chars": 3148,
+   "hits": []
+  },
+  {
+   "label": "result start @1440",
+   "chars": 3325,
+   "hits": []
+  },
+  {
+   "label": "result start @390",
+   "chars": 3325,
+   "hits": []
+  },
+  {
+   "label": "result dm @1440",
+   "chars": 3064,
+   "hits": []
+  },
+  {
+   "label": "result dm @390",
+   "chars": 3064,
+   "hits": []
+  },
+  {
+   "label": "result close @1440",
+   "chars": 3019,
+   "hits": []
+  },
+  {
+   "label": "result close @390",
+   "chars": 3019,
+   "hits": []
+  },
+  {
+   "label": "home @390",
+   "chars": 5362,
+   "hits": []
+  }
+ ],
+ "proof": [
+  {
+   "s": "managed $50M+ in ad spend",
+   "found": true
+  },
+  {
+   "s": "been doing marketing for the last 10 years or so",
+   "found": true
+  },
+  {
+   "s": "a medspa from $0 to 5+ locations doing $300K+ each",
+   "found": true
+  },
+  {
+   "s": "a fitness gym went from $25K a month to $55K a month in 9 months by restructuring the offer",
+   "found": true
+  },
+  {
+   "s": "the offer, the script and the close, all on the same afternoon",
+   "found": true
+  },
+  {
+   "s": "an AI education business now doing $40K a month",
+   "found": true
+  },
+  {
+   "s": "“Joshua is truly a rockstar at viral content strategy, user acquisition, and marketing.”",
+   "found": true
+  },
+  {
+   "s": "“He's helped me implement strategies that are practical and has held me accountable.”",
+   "found": true
+  }
+ ],
+ "tap": {
+  "hoverMedia": false,
+  "baseBg": "rgb(255, 255, 255)",
+  "tapPoint": {
+   "x": 195,
+   "y": 184
+  },
+  "q3": [
+   {
+    "text": "A\nI can’t say my offer in one clear line yet, or m",
+    "bg": "rgb(255, 255, 255)",
+    "arrowOpacity": "0",
+    "hovered": true
+   },
+   {
+    "text": "B\nPlenty of people know me and what I do, but almo",
+    "bg": "rgb(255, 255, 255)",
+    "arrowOpacity": "0",
+    "hovered": false
+   },
+   {
+    "text": "C\nConversations start, but they rarely turn into a",
+    "bg": "rgb(255, 255, 255)",
+    "arrowOpacity": "0",
+    "hovered": false
+   },
+   {
+    "text": "D\nI get on calls, but too many end with “let me th",
+    "bg": "rgb(255, 255, 255)",
+    "arrowOpacity": "0",
+    "hovered": false
+   }
+  ],
+  "looksPicked": false
+ },
+ "contrast": {
+  "result prereq": {
+   "body": {
+    "min": 5.09,
+    "minText": "Skip to the 3 questions",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "nav": {
+    "min": 18.75,
+    "minText": "Social Money Models",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75
+    },
+    "fails": []
+   },
+   "result__head": {
+    "min": 4.68,
+    "minText": "Your step: the Prereq",
+    "pairs": {
+     "rgb(76, 125, 255) on rgb(21, 27, 41)": 4.68,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(200, 205, 212) on rgb(16, 18, 22)": 11.73,
+     "rgb(169, 175, 185) on rgb(16, 18, 22)": 8.5
+    },
+    "fails": []
+   },
+   "cause": {
+    "min": 8.85,
+    "minText": "Why it stalls here",
+    "pairs": {
+     "rgb(61, 66, 75) on rgb(238, 240, 243)": 8.85,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(255, 255, 255) on rgb(40, 42, 45)": 14.43,
+     "rgb(242, 243, 245) on rgb(16, 18, 22)": 16.89
+    },
+    "fails": []
+   },
+   "guide": {
+    "min": 5.09,
+    "minText": "Start your growth today",
+    "pairs": {
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(242, 243, 245)": 16.89,
+     "rgb(74, 80, 90) on rgb(242, 243, 245)": 7.31,
+     "rgb(29, 78, 216) on rgb(232, 238, 255)": 5.78,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(16, 18, 22) on rgb(246, 247, 249)": 17.49,
+     "rgb(11, 26, 64) on rgb(195, 210, 251)": 11.3,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "path": {
+    "min": 5.08,
+    "minText": "You are here",
+    "pairs": {
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(242, 243, 245)": 16.89,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(16, 18, 22) on rgb(76, 125, 255)": 5.08,
+     "rgb(61, 66, 75) on rgb(238, 240, 243)": 8.85
+    },
+    "fails": []
+   },
+   "next": {
+    "min": 4.68,
+    "minText": "Next",
+    "pairs": {
+     "rgb(76, 125, 255) on rgb(21, 27, 41)": 4.68,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(200, 205, 212) on rgb(16, 18, 22)": 11.73,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09,
+     "rgb(169, 175, 185) on rgb(16, 18, 22)": 8.5
+    },
+    "fails": []
+   },
+   "foot": {
+    "min": 8.87,
+    "minText": "© 2026 Social Money Models",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(11, 12, 15)": 19.56,
+     "rgb(169, 175, 185) on rgb(11, 12, 15)": 8.87,
+     "rgb(200, 205, 212) on rgb(11, 12, 15)": 12.24
+    },
+    "fails": []
+   }
+  },
+  "result start": {
+   "body": {
+    "min": 5.09,
+    "minText": "Skip to the 3 questions",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "nav": {
+    "min": 18.75,
+    "minText": "Social Money Models",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75
+    },
+    "fails": []
+   },
+   "result__head": {
+    "min": 4.68,
+    "minText": "Your step: Step 0 and Step 1",
+    "pairs": {
+     "rgb(76, 125, 255) on rgb(21, 27, 41)": 4.68,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(200, 205, 212) on rgb(16, 18, 22)": 11.73,
+     "rgb(169, 175, 185) on rgb(16, 18, 22)": 8.5
+    },
+    "fails": []
+   },
+   "cause": {
+    "min": 8.85,
+    "minText": "Why it stalls here",
+    "pairs": {
+     "rgb(61, 66, 75) on rgb(238, 240, 243)": 8.85,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(255, 255, 255) on rgb(40, 42, 45)": 14.43,
+     "rgb(242, 243, 245) on rgb(16, 18, 22)": 16.89
+    },
+    "fails": []
+   },
+   "guide": {
+    "min": 5.09,
+    "minText": "Start your growth today",
+    "pairs": {
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(242, 243, 245)": 16.89,
+     "rgb(74, 80, 90) on rgb(242, 243, 245)": 7.31,
+     "rgb(29, 78, 216) on rgb(232, 238, 255)": 5.78,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(242, 243, 245) on rgb(16, 18, 22)": 16.89,
+     "rgb(201, 214, 255) on rgb(29, 42, 73)": 9.87,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "path": {
+    "min": 5.08,
+    "minText": "You are here",
+    "pairs": {
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(242, 243, 245)": 16.89,
+     "rgb(61, 66, 75) on rgb(238, 240, 243)": 8.85,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(16, 18, 22) on rgb(76, 125, 255)": 5.08
+    },
+    "fails": []
+   },
+   "next": {
+    "min": 4.68,
+    "minText": "Next",
+    "pairs": {
+     "rgb(76, 125, 255) on rgb(21, 27, 41)": 4.68,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(200, 205, 212) on rgb(16, 18, 22)": 11.73,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09,
+     "rgb(169, 175, 185) on rgb(16, 18, 22)": 8.5
+    },
+    "fails": []
+   },
+   "foot": {
+    "min": 8.87,
+    "minText": "© 2026 Social Money Models",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(11, 12, 15)": 19.56,
+     "rgb(169, 175, 185) on rgb(11, 12, 15)": 8.87,
+     "rgb(200, 205, 212) on rgb(11, 12, 15)": 12.24
+    },
+    "fails": []
+   }
+  },
+  "result dm": {
+   "body": {
+    "min": 5.09,
+    "minText": "Skip to the 3 questions",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "nav": {
+    "min": 18.75,
+    "minText": "Social Money Models",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75
+    },
+    "fails": []
+   },
+   "result__head": {
+    "min": 4.68,
+    "minText": "Your step: Step 2, DM to booked call",
+    "pairs": {
+     "rgb(76, 125, 255) on rgb(21, 27, 41)": 4.68,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(200, 205, 212) on rgb(16, 18, 22)": 11.73,
+     "rgb(169, 175, 185) on rgb(16, 18, 22)": 8.5
+    },
+    "fails": []
+   },
+   "cause": {
+    "min": 8.85,
+    "minText": "Why it stalls here",
+    "pairs": {
+     "rgb(61, 66, 75) on rgb(238, 240, 243)": 8.85,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(255, 255, 255) on rgb(40, 42, 45)": 14.43,
+     "rgb(242, 243, 245) on rgb(16, 18, 22)": 16.89
+    },
+    "fails": []
+   },
+   "guide": {
+    "min": 5.09,
+    "minText": "Start your growth today",
+    "pairs": {
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(242, 243, 245)": 16.89,
+     "rgb(74, 80, 90) on rgb(242, 243, 245)": 7.31,
+     "rgb(29, 78, 216) on rgb(232, 238, 255)": 5.78,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(242, 243, 245) on rgb(16, 18, 22)": 16.89,
+     "rgb(201, 214, 255) on rgb(29, 42, 73)": 9.87,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "path": {
+    "min": 5.08,
+    "minText": "You are here",
+    "pairs": {
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(242, 243, 245)": 16.89,
+     "rgb(61, 66, 75) on rgb(238, 240, 243)": 8.85,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(16, 18, 22) on rgb(76, 125, 255)": 5.08
+    },
+    "fails": []
+   },
+   "next": {
+    "min": 4.68,
+    "minText": "Next",
+    "pairs": {
+     "rgb(76, 125, 255) on rgb(21, 27, 41)": 4.68,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(200, 205, 212) on rgb(16, 18, 22)": 11.73,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09,
+     "rgb(169, 175, 185) on rgb(16, 18, 22)": 8.5
+    },
+    "fails": []
+   },
+   "foot": {
+    "min": 8.87,
+    "minText": "© 2026 Social Money Models",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(11, 12, 15)": 19.56,
+     "rgb(169, 175, 185) on rgb(11, 12, 15)": 8.87,
+     "rgb(200, 205, 212) on rgb(11, 12, 15)": 12.24
+    },
+    "fails": []
+   }
+  },
+  "result close": {
+   "body": {
+    "min": 5.09,
+    "minText": "Skip to the 3 questions",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "nav": {
+    "min": 18.75,
+    "minText": "Social Money Models",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75
+    },
+    "fails": []
+   },
+   "result__head": {
+    "min": 4.68,
+    "minText": "Your step: Step 3, the close call",
+    "pairs": {
+     "rgb(76, 125, 255) on rgb(21, 27, 41)": 4.68,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(200, 205, 212) on rgb(16, 18, 22)": 11.73,
+     "rgb(169, 175, 185) on rgb(16, 18, 22)": 8.5
+    },
+    "fails": []
+   },
+   "cause": {
+    "min": 8.85,
+    "minText": "Why it stalls here",
+    "pairs": {
+     "rgb(61, 66, 75) on rgb(238, 240, 243)": 8.85,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(255, 255, 255) on rgb(40, 42, 45)": 14.43,
+     "rgb(242, 243, 245) on rgb(16, 18, 22)": 16.89
+    },
+    "fails": []
+   },
+   "guide": {
+    "min": 5.09,
+    "minText": "Start your growth today",
+    "pairs": {
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(242, 243, 245)": 16.89,
+     "rgb(74, 80, 90) on rgb(242, 243, 245)": 7.31,
+     "rgb(29, 78, 216) on rgb(232, 238, 255)": 5.78,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(16, 18, 22) on rgb(246, 247, 249)": 17.49,
+     "rgb(11, 26, 64) on rgb(195, 210, 251)": 11.3,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "path": {
+    "min": 5.08,
+    "minText": "You are here",
+    "pairs": {
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(242, 243, 245)": 16.89,
+     "rgb(61, 66, 75) on rgb(238, 240, 243)": 8.85,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(16, 18, 22) on rgb(76, 125, 255)": 5.08
+    },
+    "fails": []
+   },
+   "next": {
+    "min": 4.68,
+    "minText": "Next",
+    "pairs": {
+     "rgb(76, 125, 255) on rgb(21, 27, 41)": 4.68,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(200, 205, 212) on rgb(16, 18, 22)": 11.73,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09,
+     "rgb(169, 175, 185) on rgb(16, 18, 22)": 8.5
+    },
+    "fails": []
+   },
+   "foot": {
+    "min": 8.87,
+    "minText": "© 2026 Social Money Models",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(11, 12, 15)": 19.56,
+     "rgb(169, 175, 185) on rgb(11, 12, 15)": 8.87,
+     "rgb(200, 205, 212) on rgb(11, 12, 15)": 12.24
+    },
+    "fails": []
+   }
+  },
+  "home": {
+   "body": {
+    "min": 5.09,
+    "minText": "Skip to the 3 questions",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "nav": {
+    "min": 5.09,
+    "minText": "Take the free quiz",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "hero": {
+    "min": 4.68,
+    "minText": "By Joshua Valentin, who managed $50M+ in",
+    "pairs": {
+     "rgb(76, 125, 255) on rgb(21, 27, 41)": 4.68,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(76, 125, 255) on rgb(16, 18, 22)": 5.08,
+     "rgb(227, 230, 234) on rgb(16, 18, 22)": 14.97,
+     "rgb(200, 205, 212) on rgb(16, 18, 22)": 11.73,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09,
+     "rgb(242, 243, 245) on rgb(16, 18, 22)": 16.89,
+     "rgb(169, 175, 185) on rgb(16, 18, 22)": 8.5,
+     "rgb(29, 78, 216) on rgb(232, 238, 255)": 5.78,
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(139, 145, 155) on rgb(16, 18, 22)": 5.91
+    },
+    "fails": []
+   },
+   "creds": {
+    "min": 8.5,
+    "minText": "Free to start in the community. Then $7/",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(169, 175, 185) on rgb(16, 18, 22)": 8.5
+    },
+    "fails": []
+   },
+   "ways": {
+    "min": 4.68,
+    "minText": "Skool community · 7 days free",
+    "pairs": {
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(242, 243, 245)": 16.89,
+     "rgb(61, 66, 75) on rgb(238, 240, 243)": 8.85,
+     "rgb(16, 18, 22) on rgb(255, 255, 255)": 18.75,
+     "rgb(76, 125, 255) on rgb(21, 27, 41)": 4.68,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(180, 186, 196) on rgb(16, 18, 22)": 9.61,
+     "rgb(76, 125, 255) on rgb(16, 18, 22)": 5.08
+    },
+    "fails": []
+   },
+   "magnet": {
+    "min": 4.71,
+    "minText": "Free · About a minute",
+    "pairs": {
+     "rgb(76, 125, 255) on rgb(18, 26, 44)": 4.71,
+     "rgb(227, 230, 234) on rgb(13, 17, 26)": 15.08,
+     "rgb(255, 255, 255) on rgb(13, 17, 26)": 18.88,
+     "rgb(169, 175, 185) on rgb(13, 17, 26)": 8.56,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "work": {
+    "min": 4.93,
+    "minText": "Client work",
+    "pairs": {
+     "rgb(76, 125, 255) on rgb(16, 21, 34)": 4.93,
+     "rgb(227, 230, 234) on rgb(11, 12, 15)": 15.62,
+     "rgb(255, 255, 255) on rgb(11, 12, 15)": 19.56,
+     "rgb(169, 175, 185) on rgb(11, 12, 15)": 8.87,
+     "rgb(157, 182, 255) on rgb(28, 35, 53)": 7.88,
+     "rgb(255, 255, 255) on rgb(23, 25, 30)": 17.58,
+     "rgb(227, 230, 234) on rgb(23, 25, 30)": 14.05,
+     "rgb(211, 215, 221) on rgb(23, 25, 30)": 12.17,
+     "rgb(139, 145, 155) on rgb(23, 25, 30)": 5.54,
+     "rgb(255, 255, 255) on rgb(47, 98, 240)": 5.09
+    },
+    "fails": []
+   },
+   "about": {
+    "min": 7.31,
+    "minText": "I’ve managed $50M+ in ad spend. I’ll hel",
+    "pairs": {
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(242, 243, 245)": 16.89,
+     "rgb(74, 80, 90) on rgb(242, 243, 245)": 7.31
+    },
+    "fails": []
+   },
+   "faq": {
+    "min": 7.31,
+    "minText": "7 days free, then $7/month at launch. Ca",
+    "pairs": {
+     "rgb(74, 80, 90) on rgb(255, 255, 255)": 8.12,
+     "rgb(16, 18, 22) on rgb(242, 243, 245)": 16.89,
+     "rgb(255, 255, 255) on rgb(16, 18, 22)": 18.75,
+     "rgb(74, 80, 90) on rgb(242, 243, 245)": 7.31
+    },
+    "fails": []
+   },
+   "foot": {
+    "min": 6.17,
+    "minText": "On this page",
+    "pairs": {
+     "rgb(255, 255, 255) on rgb(11, 12, 15)": 19.56,
+     "rgb(169, 175, 185) on rgb(11, 12, 15)": 8.87,
+     "rgb(139, 145, 155) on rgb(11, 12, 15)": 6.17,
+     "rgb(200, 205, 212) on rgb(11, 12, 15)": 12.24
+    },
+    "fails": []
+   }
+  }
+ },
+ "consoleErrors": [],
+ "about": [
+  {
+   "s": "Social Money Models is for founders, creators and niche agencies working toward a repeatable path from conversations to calls to clients.",
+   "found": true
+  },
+  {
+   "s": "I've managed $50M+ in ad spend. I'll help you apply my client-getting system, with personal feedback on your work.",
+   "found": true
+  },
+  {
+   "s": "My aim: help you know what to do next, get it done, and improve it.",
+   "found": true
+  },
+  {
+   "s": "Start with the 7 day Quick Start.",
+   "found": true
+  },
+  {
+   "s": "Then $7/month at launch. Price will increase as members join and resources are added.",
+   "found": true
+  },
+  {
+   "s": "Start your growth today",
+   "found": true
+  }
+ ],
+ "links": {
+  "skool": [
+   "https://www.skool.com/social-money-models-7594",
+   "https://www.skool.com/social-money-models-7594",
+   "https://www.skool.com/social-money-models-7594",
+   "https://www.skool.com/social-money-models-7594",
+   "https://www.skool.com/social-money-models-7594",
+   "https://www.skool.com/social-money-models-7594",
+   "https://www.skool.com/social-money-models-7594",
+   "https://www.skool.com/social-money-models-7594"
+  ],
+  "substack": [
+   "https://thejoshuav.substack.com/subscribe",
+   "https://thejoshuav.substack.com/subscribe",
+   "https://thejoshuav.substack.com/subscribe",
+   "https://thejoshuav.substack.com/subscribe"
+  ]
+ },
+ "fonts": [
+  "Cabinet Grotesk 500",
+  "Cabinet Grotesk 800",
+  "Satoshi 400",
+  "Satoshi 500",
+  "Satoshi 700"
+ ]
+}

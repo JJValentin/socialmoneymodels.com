@@ -1,47 +1,15 @@
 // Social Money Models v5: the 3-question quiz, the email gate and the result. Quiz flow and focus logic kept from v4.
-// Email: on submit, the visitor's email is posted to Substack's own embed form endpoint
-// (/api/v1/free?nojs=true, the same fields as thejoshuav.substack.com/embed) inside a hidden iframe,
-// so Substack adds them to Social/Money. Only on the live host, so previews and tests never subscribe anyone.
-// Joshua's own tagged copy: the same submit also posts the email, the signup source and (for the quiz)
-// the result step and first two answers to /api/signup, which appends a row to his Google Sheet.
-// EchoOS "Get notified" uses the same two paths with the tag echoos-waitlist. No analytics, no cookies.
+// Email: on submit, the email, the signup source and (for the quiz) the result step and first two
+// answers go to /api/signup, which appends a tagged row to Joshua's private Google Sheet. Nothing is
+// sent to Substack: its signup endpoint refuses outside posts (403, 2026-10-28), and its terms bar scripted
+// imports. The newsletter is a plain link to its subscribe page. No analytics, no cookies.
 (function () {
   // The one place for the outbound links. index.html carries the same hrefs as the JS-off fallback.
   var SKOOL_URL = 'https://www.skool.com/social-money-models-7594';
   var SUBSTACK_URL = 'https://thejoshuav.substack.com/subscribe';
-  var SUBSTACK_FORM = 'https://thejoshuav.substack.com/api/v1/free?nojs=true';
   var LIVE_HOSTS = ['socialmoneymodels.com', 'www.socialmoneymodels.com'];
 
-  // Fire and forget: the result shows at once; Substack sends its own welcome email.
-  function subscribe(address) {
-    if (LIVE_HOSTS.indexOf(location.hostname) === -1 && !window.SMM_FORCE_SUBSCRIBE) return;
-    var frame = document.querySelector('iframe[name="smm-substack"]');
-    if (!frame) {
-      frame = document.createElement('iframe');
-      frame.name = 'smm-substack';
-      frame.title = 'Newsletter signup';
-      frame.hidden = true;
-      frame.tabIndex = -1;
-      frame.setAttribute('aria-hidden', 'true');
-      document.body.appendChild(frame);
-    }
-    var f = document.createElement('form');
-    f.method = 'post';
-    f.action = SUBSTACK_FORM;
-    f.target = 'smm-substack';
-    f.hidden = true;
-    var fields = { email: address, source: 'embed', first_url: location.href, first_referrer: document.referrer,
-      current_url: location.href, current_referrer: document.referrer };
-    Object.keys(fields).forEach(function (k) {
-      var i = document.createElement('input');
-      i.type = 'hidden'; i.name = k; i.value = fields[k];
-      f.appendChild(i);
-    });
-    document.body.appendChild(f);
-    f.submit();
-    f.remove();
-  }
-  // Joshua's tagged list (functions/api/signup.js). Same live-host guard as subscribe().
+  // Joshua's tagged list (functions/api/signup.js). Only on the live host, so previews and tests never add rows.
   function record(address, extra) {
     if (LIVE_HOSTS.indexOf(location.hostname) === -1 && !window.SMM_FORCE_SUBSCRIBE) return;
     var body = { email: address };
@@ -78,7 +46,6 @@
       }
       nEmail.removeAttribute('aria-invalid');
       nError.textContent = '';
-      subscribe(v);
       record(v, { source: 'echoos' });
       notify.querySelector('.notify__row').hidden = true;
       nNote.textContent = 'You’re on the list. I’ll email you when EchoOS opens.';
@@ -169,7 +136,6 @@
     }
     email.removeAttribute('aria-invalid');
     error.textContent = '';
-    subscribe(value);
     record(value, { source: 'quiz', step: answers[3], q1: ECHO[1][answers[1]], q2: ECHO[2][answers[2]] });
     reveal();
   });
