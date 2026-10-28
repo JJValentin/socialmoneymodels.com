@@ -22,7 +22,7 @@
   document.querySelectorAll('[data-skool]').forEach(function (a) { a.href = SKOOL_URL; });
   document.querySelectorAll('[data-substack]').forEach(function (a) { a.href = SUBSTACK_URL; });
 
-  // EchoOS "Get notified": the link opens a one-field form in the card (JS off: the link goes to Substack).
+  // EchoOS "Get notified": the link opens a one-field form in the card (JS off: the link goes to the EchoOS waitlist on tryechoos.com).
   var notify = document.getElementById('notify-echoos');
   var notifyOpen = document.querySelector('[data-notify-toggle]');
   if (notify && notifyOpen) {
