@@ -2,7 +2,9 @@
 // Email: on submit, the visitor's email is posted to Substack's own embed form endpoint
 // (/api/v1/free?nojs=true, the same fields as thejoshuav.substack.com/embed) inside a hidden iframe,
 // so Substack adds them to Social/Money. Only on the live host, so previews and tests never subscribe anyone.
-// Quiz answers are not sent anywhere. No analytics, no storage.
+// Joshua's own tagged copy: the same submit also posts the email, the signup source and (for the quiz)
+// the result step and first two answers to /api/signup, which appends a row to his Google Sheet.
+// EchoOS "Get notified" uses the same two paths with the tag echoos-waitlist. No analytics, no cookies.
 (function () {
   // The one place for the outbound links. index.html carries the same hrefs as the JS-off fallback.
   var SKOOL_URL = 'https://www.skool.com/social-money-models-7594';
@@ -39,8 +41,49 @@
     f.submit();
     f.remove();
   }
+  // Joshua's tagged list (functions/api/signup.js). Same live-host guard as subscribe().
+  function record(address, extra) {
+    if (LIVE_HOSTS.indexOf(location.hostname) === -1 && !window.SMM_FORCE_SUBSCRIBE) return;
+    var body = { email: address };
+    Object.keys(extra || {}).forEach(function (k) { body[k] = extra[k]; });
+    try {
+      fetch('/api/signup', { method: 'POST', keepalive: true, headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(body) }).catch(function () {});
+    } catch (err) { /* the result never waits on this */ }
+  }
   document.querySelectorAll('[data-skool]').forEach(function (a) { a.href = SKOOL_URL; });
   document.querySelectorAll('[data-substack]').forEach(function (a) { a.href = SUBSTACK_URL; });
+
+  // EchoOS "Get notified": the link opens a one-field form in the card (JS off: the link goes to Substack).
+  var notify = document.getElementById('notify-echoos');
+  var notifyOpen = document.querySelector('[data-notify-toggle]');
+  if (notify && notifyOpen) {
+    var nEmail = notify.querySelector('input[type=email]');
+    var nError = notify.querySelector('.notify__error');
+    var nNote = notify.querySelector('.notify__note');
+    notifyOpen.addEventListener('click', function (e) {
+      e.preventDefault();
+      notify.hidden = false;
+      notifyOpen.setAttribute('aria-expanded', 'true');
+      nEmail.focus();
+    });
+    notify.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = nEmail.value.trim();
+      if (!v || !nEmail.checkValidity()) {
+        nEmail.setAttribute('aria-invalid', 'true');
+        nError.textContent = 'Enter an email like name@yourbusiness.com.';
+        nEmail.focus();
+        return;
+      }
+      nEmail.removeAttribute('aria-invalid');
+      nError.textContent = '';
+      subscribe(v);
+      record(v, { source: 'echoos' });
+      notify.querySelector('.notify__row').hidden = true;
+      nNote.textContent = 'You’re on the list. I’ll email you when EchoOS opens.';
+    });
+  }
 
   var form = document.getElementById('quiz-form');
   if (!form) return;
@@ -127,6 +170,7 @@
     email.removeAttribute('aria-invalid');
     error.textContent = '';
     subscribe(value);
+    record(value, { source: 'quiz', step: answers[3], q1: ECHO[1][answers[1]], q2: ECHO[2][answers[2]] });
     reveal();
   });
 
