@@ -1,9 +1,4 @@
-// Social Money Models v5: the 3-question quiz, the email gate and the result. Quiz flow and focus logic kept from v4.
-// Email: on submit, the email, the signup source and (for the quiz) the result step and first two
-// answers go to /api/signup, which appends a tagged row to Joshua's private Google Sheet. Nothing is
-// sent to Substack: its signup endpoint refuses outside posts (403, 2026-10-28), and its terms bar scripted
-// imports. The newsletter is a plain link to its subscribe page. Analytics: an accepted email pushes a
-// generate_lead event to the GTM dataLayer (assets/tracking.js); the email itself is never pushed.
+// Two-question quiz with the existing signup, attribution and tracking integration.
 (function () {
   function lead(formName) { if (window.trackEvent) window.trackEvent('generate_lead', { form_name: formName }); }
   // The one place for the outbound links. index.html carries the same hrefs as the JS-off fallback.
@@ -12,14 +7,19 @@
   var LIVE_HOSTS = ['socialmoneymodels.com', 'www.socialmoneymodels.com'];
 
   // Joshua's tagged list (functions/api/signup.js). Only on the live host, so previews and tests never add rows.
-  function record(address, extra) {
-    if (LIVE_HOSTS.indexOf(location.hostname) === -1 && !window.SMM_FORCE_SUBSCRIBE) return;
+  async function record(address, extra) {
+    if (LIVE_HOSTS.indexOf(location.hostname) === -1 && !window.SMM_FORCE_SUBSCRIBE) return false;
     var body = { email: address };
     Object.keys(extra || {}).forEach(function (k) { body[k] = extra[k]; });
+    var controller = new AbortController();
+    var timer = window.setTimeout(function () { controller.abort(); }, 12000);
     try {
-      fetch('/api/signup', { method: 'POST', keepalive: true, headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(body) }).catch(function () {});
-    } catch (err) { /* the result never waits on this */ }
+      var response = await fetch('/api/signup', { method: 'POST', keepalive: true,
+        signal: controller.signal, headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+      var saved = await response.json();
+      return response.ok && saved.ok === true;
+    } catch (err) { return false; }
+    finally { window.clearTimeout(timer); }
   }
   document.querySelectorAll('[data-skool]').forEach(function (a) { a.href = SKOOL_URL; });
   document.querySelectorAll('[data-substack]').forEach(function (a) { a.href = SUBSTACK_URL; });
@@ -59,7 +59,6 @@
 
   var form = document.getElementById('quiz-form');
   if (!form) return;
-
   var quiz = document.getElementById('quiz');
   var home = document.getElementById('home');
   var result = document.getElementById('result');
@@ -69,143 +68,143 @@
   var back = form.querySelector('.back');
   var email = document.getElementById('email');
   var error = document.getElementById('email-error');
+  var submit = form.querySelector('[type=submit]');
   var calm = window.matchMedia('(prefers-reduced-motion: reduce)');
   var HOME_TITLE = document.title;
-
-  var answers = { 1: null, 2: null, 3: null };
+  var answers = { 1: null, 2: null };
   var current = 1;
+  var pending = false;
 
-  var ECHO = {
-    1: {
-      a: 'a path to clients you can repeat, not luck',
-      b: 'a steady way to land clients without waiting on referrals',
-      c: 'more of the people in your audience or list to become clients'
-    },
-    2: {
-      a: 'do great work for your clients, and find new ones when you can',
-      b: 'post something useful, then wait for people to reach out',
-      c: 'try a new tactic, then drop it when it doesn’t land fast',
-      d: 'talk to interested people, then let it drift when you’re busy'
-    },
-    3: {
-      prereq: 'you can’t say your offer in one clear line yet, or your contacts are scattered all over',
-      start: 'plenty of people know you and what you do, but almost nobody asks to work with you',
-      dm: 'conversations start, but they rarely turn into a booked call',
-      close: 'you get on calls, but too many end with “let me think about it”'
-    }
-  };
-
-  // Which rows of the shared system list get "You are here".
-  var HERE = { prereq: ['prereq'], start: ['s0', 's1'], dm: ['s2'], close: ['s3'] };
+  // Release holds: set each destination only after its guide and routing are approved.
+  var GUIDE_URLS = { content: null, income: null, clients: null };
+  document.querySelectorAll('[data-guide]').forEach(function (a) {
+    var url = GUIDE_URLS[a.dataset.guide];
+    if (url) { a.href = url; a.removeAttribute('aria-disabled'); }
+  });
 
   function show(n, focus) {
     current = n;
-    steps.forEach(function (s) {
-      var on = Number(s.dataset.step) === n;
-      s.hidden = !on;
-      s.classList.remove('is-in');
-      if (on) { void s.offsetWidth; s.classList.add('is-in'); }
-    });
-    bars.forEach(function (b, i) { b.classList.toggle('is-on', i < Math.min(n, 3)); });
-    count.textContent = n <= 3 ? n + ' of 3' : 'Last step';
+    steps.forEach(function (s) { s.hidden = Number(s.dataset.step) !== n; });
+    bars.forEach(function (b, i) { b.classList.toggle('is-on', i < Math.min(n, 2)); });
+    count.textContent = n < 3 ? 'Question ' + n + ' of 2' : '';
     back.hidden = n === 1;
-    if (focus) {
-      var target = n === 4 ? email : steps[n - 1].querySelector('.q');
-      target.focus({ preventScroll: true });
-    }
+    if (focus) (n === 3 ? email : steps[n - 1].querySelector('.q')).focus({ preventScroll: true });
+  }
+
+  function reveal(key) {
+    var article;
+    result.querySelectorAll('.result').forEach(function (a) {
+      a.hidden = a.dataset.result !== key;
+      if (!a.hidden) article = a;
+    });
+    home.hidden = true;
+    result.hidden = false;
+    document.body.classList.add('is-result');
+    document.title = article.querySelector('.result__title').textContent + ' | Social Money Models';
+    window.scrollTo(0, 0);
+    article.querySelector('.result__title').focus({ preventScroll: true });
   }
 
   form.addEventListener('click', function (e) {
     var opt = e.target.closest('.opt');
-    if (!opt) return;
+    if (!opt || pending || opt.closest('.step').hidden) return;
     var q = Number(opt.dataset.q);
     answers[q] = opt.dataset.v;
-    opt.parentElement.querySelectorAll('.opt').forEach(function (o) {
-      o.setAttribute('aria-pressed', String(o === opt));
-    });
-    window.setTimeout(function () { show(q + 1, true); }, calm.matches ? 0 : 220);
+    opt.parentElement.querySelectorAll('.opt').forEach(function (o) { o.setAttribute('aria-pressed', String(o === opt)); });
+    if (q === 2 && answers[2] === 'none') reveal('newsletter');
+    else show(q + 1, true);
   });
-
   form.querySelectorAll('.opt').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
+  back.addEventListener('click', function () { if (!pending) show(Math.max(1, current - 1), true); });
 
-  back.addEventListener('click', function () { show(Math.max(1, current - 1), true); });
-
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
+    if (pending || current !== 3 || !answers[1] || !answers[2] || answers[2] === 'none') return;
     var value = email.value.trim();
     if (!value || !email.checkValidity()) {
       email.setAttribute('aria-invalid', 'true');
-      error.textContent = 'Enter an email like name@yourbusiness.com.';
+      error.textContent = 'Enter a valid email address to continue.';
       email.focus();
       return;
     }
     email.removeAttribute('aria-invalid');
     error.textContent = '';
-    var quizData = { source: 'quiz', step: answers[3], q1: ECHO[1][answers[1]], q2: ECHO[2][answers[2]] };
+    pending = true;
+    submit.disabled = true;
+    back.disabled = true;
+    email.readOnly = true;
+    form.setAttribute('aria-busy', 'true');
+    submit.textContent = 'Loading your result...';
+    var quizData = { source: 'quiz' };
+    [1, 2].forEach(function (q) {
+      quizData['q' + q] = form.querySelector('[data-q="' + q + '"][data-v="' + answers[q] + '"] .opt__text').textContent;
+    });
+    // The existing endpoint stores q1/q2. Do not invent a legacy step tag for a selected win.
     try { quizData.attribution = window.leadAttribution.get(); } catch (err) {}
-    record(value, quizData);
-    lead('quiz');
-    reveal();
+    try {
+      if (!await record(value, quizData)) throw new Error('save_failed');
+      lead('quiz');
+      reveal(answers[1]);
+    } catch (err) {
+      error.textContent = "Your email didn't save. Try again to see your result.";
+      error.focus();
+    } finally {
+      pending = false;
+      submit.disabled = false;
+      back.disabled = false;
+      email.readOnly = false;
+      form.removeAttribute('aria-busy');
+      submit.textContent = 'Show my result';
+    }
   });
 
-  function reveal() {
-    var key = answers[3];
-    var article = null;
-    result.querySelectorAll('.result').forEach(function (a) {
-      var on = a.dataset.result === key;
-      a.hidden = !on;
-      if (on) article = a;
-    });
-    article.querySelectorAll('[data-echo]').forEach(function (s) {
-      var q = s.dataset.echo;
-      s.textContent = ECHO[q][answers[q]];
-    });
-    result.querySelectorAll('.steprow').forEach(function (r) {
-      r.classList.toggle('is-here', HERE[key].indexOf(r.dataset.row) !== -1);
-    });
-    home.hidden = true;
-    result.hidden = false;
-    document.body.classList.add('is-result');
-    document.title = 'Your result | Social Money Models';
-    window.scrollTo(0, 0);
-    article.querySelector('.result__title').focus({ preventScroll: true });
-  }
-
-  // The retake reset. toQuiz picks where to land: question 1 (Retake) or the top of the home page (wordmark).
-  function goHome(toQuiz) {
-    answers = { 1: null, 2: null, 3: null };
-    form.querySelectorAll('.opt').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
-    email.value = '';
+  function goHome(toQuiz, keepAnswers) {
+    if (pending) return;
+    if (!keepAnswers) {
+      answers = { 1: null, 2: null };
+      form.querySelectorAll('.opt').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
+      email.value = '';
+    }
+    error.textContent = '';
+    email.removeAttribute('aria-invalid');
     result.hidden = true;
     home.hidden = false;
     document.body.classList.remove('is-result');
     document.title = HOME_TITLE;
-    show(1, false);
+    show(keepAnswers ? 2 : 1, false);
     if (toQuiz) {
       quiz.scrollIntoView({ behavior: calm.matches ? 'auto' : 'smooth', block: 'start' });
-      steps[0].querySelector('.q').focus({ preventScroll: true });
+      steps[current - 1].querySelector('.q').focus({ preventScroll: true });
     } else {
       window.scrollTo(0, 0);
       document.getElementById('hero-title').focus({ preventScroll: true });
     }
   }
-
-  result.querySelector('.retake').addEventListener('click', function () { goHome(true); });
-
+  result.querySelectorAll('.retake').forEach(function (b) { b.addEventListener('click', function () { goHome(true, false); }); });
+  result.querySelector('.change-answer').addEventListener('click', function () { goHome(true, true); });
   document.querySelector('.nav__mark').addEventListener('click', function (e) {
-    if (!document.body.classList.contains('is-result')) return;
-    e.preventDefault();
-    goHome(false);
+    if (pending) { e.preventDefault(); return; }
+    if (!result.hidden) { e.preventDefault(); goHome(false, false); }
   });
-
+  // Shared navigation remains usable while result screens hide the homepage.
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (pending) { e.preventDefault(); return; }
+      if (result.hidden) return;
+      var target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      goHome(false, false);
+      target.scrollIntoView({ behavior: calm.matches ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
   document.querySelectorAll('.js-start').forEach(function (a) {
     a.addEventListener('click', function (e) {
       e.preventDefault();
+      if (pending) return;
       quiz.scrollIntoView({ behavior: calm.matches ? 'auto' : 'smooth', block: 'start' });
-      var target = current === 4 ? email : steps[current - 1].querySelector('.q');
-      target.focus({ preventScroll: true });
+      (current === 3 ? email : steps[current - 1].querySelector('.q')).focus({ preventScroll: true });
     });
   });
-
   show(1, false);
 })();
