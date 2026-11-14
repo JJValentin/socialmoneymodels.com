@@ -33,6 +33,12 @@ export async function onRequestPost({ request, env }) {
 
   if (!env.APPS_SCRIPT_URL || !env.FORM_SECRET) return json({ ok: false, error: 'not_configured' }, 500);
 
+  let attribution = '';
+  try {
+    const value = typeof d.attribution === 'string' ? d.attribution : JSON.stringify(d.attribution);
+    if (typeof value === 'string' && value.length <= 4096) attribution = value;
+  } catch {}
+
   const res = await fetch(env.APPS_SCRIPT_URL, {
     method: 'POST',
     redirect: 'follow',
@@ -40,6 +46,7 @@ export async function onRequestPost({ request, env }) {
     body: JSON.stringify({
       secret: env.FORM_SECRET,
       kind: 'signup',
+      attribution,
       email,
       tags: tags.join(', '),
       source: SOURCES[source],

@@ -2,8 +2,10 @@
 // Email: on submit, the email, the signup source and (for the quiz) the result step and first two
 // answers go to /api/signup, which appends a tagged row to Joshua's private Google Sheet. Nothing is
 // sent to Substack: its signup endpoint refuses outside posts (403, 2026-10-28), and its terms bar scripted
-// imports. The newsletter is a plain link to its subscribe page. No analytics, no cookies.
+// imports. The newsletter is a plain link to its subscribe page. Analytics: an accepted email pushes a
+// generate_lead event to the GTM dataLayer (assets/tracking.js); the email itself is never pushed.
 (function () {
+  function lead(formName) { if (window.trackEvent) window.trackEvent('generate_lead', { form_name: formName }); }
   // The one place for the outbound links. index.html carries the same hrefs as the JS-off fallback.
   var SKOOL_URL = 'https://www.skool.com/social-money-models-7594';
   var SUBSTACK_URL = 'https://thejoshuav.substack.com/subscribe';
@@ -46,7 +48,10 @@
       }
       nEmail.removeAttribute('aria-invalid');
       nError.textContent = '';
-      record(v, { source: 'echoos' });
+      var notifyData = { source: 'echoos' };
+      try { notifyData.attribution = window.leadAttribution.get(); } catch (err) {}
+      record(v, notifyData);
+      lead('echoos_notify');
       notify.querySelector('.notify__row').hidden = true;
       nNote.textContent = 'You’re on the list. I’ll email you when EchoOS opens.';
     });
@@ -136,7 +141,10 @@
     }
     email.removeAttribute('aria-invalid');
     error.textContent = '';
-    record(value, { source: 'quiz', step: answers[3], q1: ECHO[1][answers[1]], q2: ECHO[2][answers[2]] });
+    var quizData = { source: 'quiz', step: answers[3], q1: ECHO[1][answers[1]], q2: ECHO[2][answers[2]] };
+    try { quizData.attribution = window.leadAttribution.get(); } catch (err) {}
+    record(value, quizData);
+    lead('quiz');
     reveal();
   });
 
