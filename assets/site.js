@@ -75,6 +75,16 @@
   var current = 1;
   var pending = false;
 
+  function unlock() {
+    pending = false;
+    submit.disabled = false;
+    back.disabled = false;
+    email.readOnly = false;
+    form.removeAttribute('aria-busy');
+    submit.textContent = 'Open my guide';
+  }
+  window.addEventListener('pageshow', function (e) { if (e.persisted) unlock(); });
+
   // Provisional destinations. Release waits for approved, implemented guides.
   var GUIDE_URLS = {
     content: '/content-that-gets-watched/',
@@ -148,12 +158,7 @@
     } catch (err) {
       error.textContent = "Your email didn't save. Try again to open your guide.";
       error.focus();
-      pending = false;
-      submit.disabled = false;
-      back.disabled = false;
-      email.readOnly = false;
-      form.removeAttribute('aria-busy');
-      submit.textContent = 'Open my guide';
+      unlock();
     }
   });
 
