@@ -84,15 +84,15 @@
 </fieldset>
 
     <div class="step gate" data-step="3" hidden>
-      <p class="q" tabindex="-1" id="q3">See your quiz result.</p>
-      <p class="gate__line">Enter your email to see your result and the link to your guide.</p>
+      <p class="q" tabindex="-1" id="q3">Get your free guide.</p>
+      <p class="gate__line">Enter your email to open the free guide for the goal you chose.</p>
       <label class="gate__label" for="email">Email</label>
       <div class="gate__row">
         <input class="gate__input" id="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-error consent" placeholder="you@example.com">
-        <button class="btn btn--accent gate__btn" type="submit">Show my result</button>
+        <button class="btn btn--accent gate__btn" type="submit">Open my guide</button>
       </div>
       <p class="gate__error" id="email-error" role="alert"></p>
-      <p class="gate__consent">Your result appears next, with a link to your free guide.</p>
+      <p class="gate__consent">Your free guide opens next.</p>
       <p class="gate__consent" id="consent">Your email, answers and signup details are saved. This doesn&#x27;t subscribe you to Social/Money. <a href="/privacy.html">Privacy</a></p>
     </div>
   </form>
@@ -304,33 +304,6 @@
 </div>
 
 <div id="result" hidden>
-  <article class="result quiz-outcome" data-result="content" hidden>
-    <div class="quiz-outcome__card">
-      <h1 class="result__title" tabindex="-1">Your next win: content that gets watched.</h1>
-      <p class="quiz-outcome__body">Start with what makes a video worth watching. This guide shares the criteria for a good video, with an example of how to use them.</p>
-      <a class="btn btn--accent" data-guide="content" role="link" aria-disabled="true">Read the content guide</a>
-      <p class="gate__consent">Free. Read it on the next page.</p>
-      <button type="button" class="link-plain retake">Choose a different win</button>
-    </div>
-  </article>
-  <article class="result quiz-outcome" data-result="income" hidden>
-    <div class="quiz-outcome__card">
-      <h1 class="result__title" tabindex="-1">Your next win: turning attention into income.</h1>
-      <p class="quiz-outcome__body">Connect the people watching you with something you can sell. This guide walks through choosing an offer and starting a real conversation about it.</p>
-      <a class="btn btn--accent" data-guide="income" role="link" aria-disabled="true">Read the attention-to-income guide</a>
-      <p class="gate__consent">Free. Read it on the next page.</p>
-      <button type="button" class="link-plain retake">Choose a different win</button>
-    </div>
-  </article>
-  <article class="result quiz-outcome" data-result="clients" hidden>
-    <div class="quiz-outcome__card">
-      <h1 class="result__title" tabindex="-1">Your next win: predictable clients.</h1>
-      <p class="quiz-outcome__body">See how attention, trust and an offer fit together in a system that brings clients to you. Use the guide to map your path from being found to being hired.</p>
-      <a class="btn btn--accent" data-guide="clients" role="link" aria-disabled="true">Read the predictable-clients guide</a>
-      <p class="gate__consent">Free. Read it on the next page.</p>
-      <button type="button" class="link-plain retake">Choose a different win</button>
-    </div>
-  </article>
   <article class="result quiz-outcome" data-result="newsletter" hidden>
     <div class="quiz-outcome__card">
       <h1 class="result__title" tabindex="-1">Start with an idea you want to build.</h1>

@@ -75,12 +75,12 @@
   var current = 1;
   var pending = false;
 
-  // Release holds: set each destination only after its guide and routing are approved.
-  var GUIDE_URLS = { content: null, income: null, clients: null };
-  document.querySelectorAll('[data-guide]').forEach(function (a) {
-    var url = GUIDE_URLS[a.dataset.guide];
-    if (url) { a.href = url; a.removeAttribute('aria-disabled'); }
-  });
+  // Provisional destinations. Release waits for approved, implemented guides.
+  var GUIDE_URLS = {
+    content: '/content-that-gets-watched/',
+    income: '/attention-to-income/',
+    clients: '/predictable-clients/'
+  };
 
   function show(n, focus) {
     current = n;
@@ -134,7 +134,7 @@
     back.disabled = true;
     email.readOnly = true;
     form.setAttribute('aria-busy', 'true');
-    submit.textContent = 'Loading your result...';
+    submit.textContent = 'Opening your guide...';
     var quizData = { source: 'quiz' };
     [1, 2].forEach(function (q) {
       quizData['q' + q] = form.querySelector('[data-q="' + q + '"][data-v="' + answers[q] + '"] .opt__text').textContent;
@@ -144,17 +144,16 @@
     try {
       if (!await record(value, quizData)) throw new Error('save_failed');
       lead('quiz');
-      reveal(answers[1]);
+      window.location.assign(GUIDE_URLS[answers[1]]);
     } catch (err) {
-      error.textContent = "Your email didn't save. Try again to see your result.";
+      error.textContent = "Your email didn't save. Try again to open your guide.";
       error.focus();
-    } finally {
       pending = false;
       submit.disabled = false;
       back.disabled = false;
       email.readOnly = false;
       form.removeAttribute('aria-busy');
-      submit.textContent = 'Show my result';
+      submit.textContent = 'Open my guide';
     }
   });
 
@@ -180,7 +179,6 @@
       document.getElementById('hero-title').focus({ preventScroll: true });
     }
   }
-  result.querySelectorAll('.retake').forEach(function (b) { b.addEventListener('click', function () { goHome(true, false); }); });
   result.querySelector('.change-answer').addEventListener('click', function () { goHome(true, true); });
   document.querySelector('.nav__mark').addEventListener('click', function (e) {
     if (pending) { e.preventDefault(); return; }
