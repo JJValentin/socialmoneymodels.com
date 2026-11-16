@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var release = {
-    callUrl: '',
+    callUrl: 'https://calendly.com/socialmoneymodels/free-discovery-call-atm-audit',
     trialTerms: ''
   };
 
