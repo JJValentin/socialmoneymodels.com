@@ -9,4 +9,4 @@ html {scroll-behavior:auto} body {overflow-x:visible} .guide-masthead {backgroun
 
 
 /* Reserve the full drawing before it loads; contain preserves every edge. */
-.guide-illustration {display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;margin:24px 0 28px}
+.guide-illustration {display:block;width:100%;height:auto;aspect-ratio:160/71;object-fit:contain;margin:24px 0 28px}

@@ -1,9 +1,8 @@
-// Shared release inputs for all three guides. Empty values keep the visible holds.
+// Shared call destination for all three guides.
 (function () {
   'use strict';
   var release = {
-    callUrl: 'https://calendly.com/socialmoneymodels/free-discovery-call-atm-audit',
-    trialTerms: ''
+    callUrl: 'https://calendly.com/socialmoneymodels/free-discovery-call-atm-audit'
   };
 
   if (release.callUrl) {
@@ -25,12 +24,4 @@
     }
   }
 
-  if (release.trialTerms) {
-    document.querySelectorAll('[data-guide-terms]').forEach(function (terms) {
-      terms.textContent = release.trialTerms;
-    });
-    document.querySelectorAll('[data-guide-price-pending]').forEach(function (marker) {
-      marker.hidden = true;
-    });
-  }
 })();
